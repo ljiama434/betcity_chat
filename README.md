@@ -1,1 +1,1 @@
-# betcity_chat
+# betcity
