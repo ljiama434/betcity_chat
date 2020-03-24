@@ -86,13 +86,19 @@
         <i class="fa fa-star"></i>
       </div> <!-- end chat-header -->
 
-      <div class="chat-history">
+      <div class="chat-history" id="chat-history-id">
         <ul>
           <li>
             <div class="message-data">
               <span class="message-data-name"><i class="fa fa-circle online"></i>BCGaming</span>
               <span class="message-data-time">Today</span>
             </div>
+            <!-- <div class="message my-message" >
+              <p>Elige lo que quieres saber :</p>
+              <button type="button" class="btn btn-white" id="regmsg">Bono de registro de 500 yuanes</button>
+              <button type="button" class="btn btn-white" id="regmsg">Bono de depósito de 2000 yuanes</button>
+              <button type="button" class="btn btn-white">Póngase en contacto con el servicio al cliente instantáneo las 24 horas</button>
+            </div> -->
             <div class="message my-message" ><img src="./img/get500.jpg"></div>
             <div class="message my-message" id="startMsg1"></div>
           </li>
@@ -101,6 +107,7 @@
               $(".container").show();
               document.getElementById("startMsg1").innerHTML=d(w_msg);
               document.getElementById("startMsg2").innerHTML=d(pic1_msg);
+
             });
            
           </script>
@@ -119,18 +126,88 @@
 
     </script>
 
-      <script id="message-response-template" type="text/x-handlebars-template">
+    <script id="message-response-template" type="text/x-handlebars-template">
       <li>
         <div class="message-data">
           <span class="message-data-name"><i class="fa fa-circle online"></i> BCGaming</span>
           <span class="message-data-time">{{time}}, Today</span>
         </div>
-        <div class="message my-message">
-          {{{response}}}
+        <!-- <div class="message my-message">
+          {{{b_response}}}
+        </div> -->
+        <div class="message my-message" >
+          <p>Elige lo que quieres saber :</p>
+          <button type="button" class="btn btn-white" id="regmsg1" onclick="b_msg_f1()">Bono de registro de 500 yuanes</button>
+          <button type="button" class="btn btn-white" id="regmsg2" onclick="b_msg_f2()">Bono de depósito de 2000 yuanes</button>
+          <button type="button" class="btn btn-white" id="regmsg3" onclick="b_msg_f3()">Servicio al cliente instantáneo las 24 horas</button>
         </div>
-        <div class="message my-message"><img src="./img/service.jpg"></div>
+        <p id="b_msgdiv1"></p>
+        <p id="b_msgdiv2"></p>
+        <p id="b_msgdiv3"></p>
+        <!-- <div class="message my-message"><img src="./img/service.jpg"></div> -->
       </li>
+    </script>
 
+    <!-- <script id="message-response-template" type="text/x-handlebars-template">
+      <li>
+        <div class="message my-message" >
+        <p id="b_msgdiv"></p>
+        </div>
+      </li>
+    </script> -->
+    
+    <script>
+      var b_msg_1=`
+      <li>
+        <div class="message-data">
+          <span class="message-data-name"><i class="fa fa-circle online"></i> BCGaming</span>
+        </div>
+        <div class="message my-message" >
+          <p>Bono de registro de 500 yuanes</p>
+          <a href="https://lihi2.com/Kb9sQ">https://lihi2.com/Kb9sQ<p><a>
+          <img src="./img/get500.jpg">
+        </div>
+      </li>`
+      var b_msg_2=`
+      <li>
+        <div class="message-data">
+          <span class="message-data-name"><i class="fa fa-circle online"></i> BCGaming</span>
+        </div>
+        <div class="message my-message" >
+          <p>¡Duplicamos tus créditos hasta por MXN 2000! te damos más dinero para seguir jugando. ¡solo haz tu primer depósito!</p>
+          <a href="https://lihi2.com/Kb9sQ">https://lihi2.com/Kb9sQ<p><a>
+          <img src="./img/get2000.jpg">
+        </div>
+      </li>`
+      var b_msg_3=`
+      <li>
+        <div class="message-data">
+          <span class="message-data-name"><i class="fa fa-circle online"></i> BCGaming</span>
+        </div>
+        <div class="message my-message" >
+          <p>Si tiene alguna pregunta, comuníquese con el servicio al cliente en el sitio web principal y le proporcionaremos una respuesta instantánea dentro de las 24 horas.</p>
+          <a href="https://lihi2.com/Kb9sQ">https://lihi2.com/Kb9sQ<p><a>
+          <img src="./img/service.jpg">
+        </div>
+      </li>`
+      function b_msg_f1() {
+        document.getElementById("b_msgdiv1").innerHTML = b_msg_1;
+        document.getElementById("b_msgdiv1").id="old_msg";
+        var objDiv = document.getElementById("chat-history-id");
+        objDiv.scrollTop = objDiv.scrollHeight;
+      }
+      function b_msg_f2() {
+        document.getElementById("b_msgdiv2").innerHTML = b_msg_2;
+        document.getElementById("b_msgdiv2").id="old_msg";
+        var objDiv = document.getElementById("chat-history-id");
+        objDiv.scrollTop = objDiv.scrollHeight;
+      }
+      function b_msg_f3() {
+        document.getElementById("b_msgdiv3").innerHTML = b_msg_3;
+        document.getElementById("b_msgdiv3").id="old_msg";
+        var objDiv = document.getElementById("chat-history-id");
+        objDiv.scrollTop = objDiv.scrollHeight;
+      }
     </script>
         </ul>
       </div> <!-- end chat-history -->
