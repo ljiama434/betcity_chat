@@ -144,6 +144,10 @@
           <button type="button" class="btn btn-white" id="regmsg5" onclick="b_msg_f5()">Tmp2</button>
           <button type="button" class="btn btn-white" id="regmsg6" onclick="b_msg_f6()">Tmp3</button>
           <button type="button" class="btn btn-white" id="regmsg7" onclick="b_msg_f7()">Tmp4</button>
+          <button type="button" class="btn btn-white" id="regmsg8" onclick="b_msg_f8()">JW1</button>
+          <button type="button" class="btn btn-white" id="regmsg9" onclick="b_msg_f9()">JW2</button>
+          <button type="button" class="btn btn-white" id="regmsg10" onclick="b_msg_f10()">JW3</button>
+          <button type="button" class="btn btn-white" id="regmsg11" onclick="b_msg_f11()">JW4</button>
         </div>
         <p id="b_msgdiv1"></p>
         <p id="b_msgdiv2"></p>
@@ -152,6 +156,10 @@
         <p id="b_msgdiv5"></p>
         <p id="b_msgdiv6"></p>
         <p id="b_msgdiv7"></p>
+        <p id="b_msgdiv8"></p>
+        <p id="b_msgdiv9"></p>
+        <p id="b_msgdiv10"></p>
+        <p id="b_msgdiv11"></p>
         <!-- <div class="message my-message"><img src="./img/service.jpg"></div> -->
       </li>
     </script>
@@ -238,6 +246,46 @@
           <img src="./img/dragon.jpg">
         </div>
       </li>`
+      var b_msg_8=`
+      <li>
+        <div class="message-data">
+          <span class="message-data-name"><i class="fa fa-circle online"></i> BCGaming</span>
+        </div>
+        <div class="message my-message" >
+          <a href="https://lihi2.com/Kb9sQ">https://lihi2.com/Kb9sQ<p><a>
+          <img src="./img/jw1.jpg">
+        </div>
+      </li>`
+      var b_msg_9=`
+      <li>
+        <div class="message-data">
+          <span class="message-data-name"><i class="fa fa-circle online"></i> BCGaming</span>
+        </div>
+        <div class="message my-message" >
+          <a href="https://lihi2.com/Kb9sQ">https://lihi2.com/Kb9sQ<p><a>
+          <img src="./img/jw2.jpg">
+        </div>
+      </li>`
+      var b_msg_10=`
+      <li>
+        <div class="message-data">
+          <span class="message-data-name"><i class="fa fa-circle online"></i> BCGaming</span>
+        </div>
+        <div class="message my-message" >
+          <a href="https://lihi2.com/Kb9sQ">https://lihi2.com/Kb9sQ<p><a>
+          <img src="./img/jw3.jpg">
+        </div>
+      </li>`
+      var b_msg_11=`
+      <li>
+        <div class="message-data">
+          <span class="message-data-name"><i class="fa fa-circle online"></i> BCGaming</span>
+        </div>
+        <div class="message my-message" >
+          <a href="https://lihi2.com/Kb9sQ">https://lihi2.com/Kb9sQ<p><a>
+          <img src="./img/jw4.jpg">
+        </div>
+      </li>`
       function b_msg_f1() {
         document.getElementById("b_msgdiv1").innerHTML = b_msg_1;
         document.getElementById("b_msgdiv1").id="old_msg";
@@ -277,6 +325,30 @@
       function b_msg_f7() {
         document.getElementById("b_msgdiv7").innerHTML = b_msg_7;
         document.getElementById("b_msgdiv7").id="old_msg";
+        var objDiv = document.getElementById("chat-history-id");
+        objDiv.scrollTop = objDiv.scrollHeight;
+      }
+      function b_msg_f8() {
+        document.getElementById("b_msgdiv8").innerHTML = b_msg_8;
+        document.getElementById("b_msgdiv8").id="old_msg";
+        var objDiv = document.getElementById("chat-history-id");
+        objDiv.scrollTop = objDiv.scrollHeight;
+      }
+      function b_msg_f9() {
+        document.getElementById("b_msgdiv9").innerHTML = b_msg_9;
+        document.getElementById("b_msgdiv9").id="old_msg";
+        var objDiv = document.getElementById("chat-history-id");
+        objDiv.scrollTop = objDiv.scrollHeight;
+      }
+      function b_msg_f10() {
+        document.getElementById("b_msgdiv10").innerHTML = b_msg_10;
+        document.getElementById("b_msgdiv10").id="old_msg";
+        var objDiv = document.getElementById("chat-history-id");
+        objDiv.scrollTop = objDiv.scrollHeight;
+      }
+      function b_msg_f11() {
+        document.getElementById("b_msgdiv11").innerHTML = b_msg_11;
+        document.getElementById("b_msgdiv11").id="old_msg";
         var objDiv = document.getElementById("chat-history-id");
         objDiv.scrollTop = objDiv.scrollHeight;
       }
