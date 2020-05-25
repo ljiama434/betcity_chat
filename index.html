@@ -148,6 +148,7 @@
           <button type="button" class="btn btn-white" id="regmsg9" onclick="b_msg_f9()">JW2</button>
           <button type="button" class="btn btn-white" id="regmsg10" onclick="b_msg_f10()">JW3</button>
           <button type="button" class="btn btn-white" id="regmsg11" onclick="b_msg_f11()">JW4</button>
+          <button type="button" class="btn btn-white" id="regmsg12" onclick="b_msg_f12()">MEX</button>
         </div>
         <p id="b_msgdiv1"></p>
         <p id="b_msgdiv2"></p>
@@ -160,6 +161,7 @@
         <p id="b_msgdiv9"></p>
         <p id="b_msgdiv10"></p>
         <p id="b_msgdiv11"></p>
+        <p id="b_msgdiv12"></p>
         <!-- <div class="message my-message"><img src="./img/service.jpg"></div> -->
       </li>
     </script>
@@ -286,6 +288,15 @@
           <img src="./img/jw4.jpg">
         </div>
       </li>`
+      <li>
+        <div class="message-data">
+          <span class="message-data-name"><i class="fa fa-circle online"></i> BCGaming</span>
+        </div>
+        <div class="message my-message" >
+          <a href="https://lihi2.com/Kb9sQ">https://lihi2.com/Kb9sQ<p><a>
+          <img src="./img/fish.jpg">
+        </div>
+      </li>`
       function b_msg_f1() {
         document.getElementById("b_msgdiv1").innerHTML = b_msg_1;
         document.getElementById("b_msgdiv1").id="old_msg";
@@ -349,6 +360,12 @@
       function b_msg_f11() {
         document.getElementById("b_msgdiv11").innerHTML = b_msg_11;
         document.getElementById("b_msgdiv11").id="old_msg";
+        var objDiv = document.getElementById("chat-history-id");
+        objDiv.scrollTop = objDiv.scrollHeight;
+      }
+      function b_msg_f12() {
+        document.getElementById("b_msgdiv12").innerHTML = b_msg_12;
+        document.getElementById("b_msgdiv12").id="old_msg";
         var objDiv = document.getElementById("chat-history-id");
         objDiv.scrollTop = objDiv.scrollHeight;
       }
